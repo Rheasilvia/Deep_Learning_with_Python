@@ -1,2 +1,2 @@
-# Deep_Learning_with-Python
-Deep_Learning_with Python Book Code Demo
+# Deep_Learning_with_Python
+Deep Learning with Python Book Code Demo
