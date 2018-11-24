@@ -701,3 +701,10 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+/IMDB/aclImdb.zip
+/IMDB/aclImdb/
+/IMDB/glove.6B/
+/IMDB/glove.6B/glove.6B.50d.txt
+/IMDB/glove.6B/glove.6B.200d.txt
+/IMDB/glove.6B/glove.6B.100d.txt
+/IMDB/glove.6B/glove.6B.300d.txt
