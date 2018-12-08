@@ -20,3 +20,19 @@ if __name__ == '__main__':
     """
     with tf.Session() as sess:
         print(sp.eval())
+
+    x = tf.SparseTensor(indices=[[0, 0], [0, 2], [1, 1]], values=[1, 1, 1], dense_shape=[2, 3])
+    # 稀疏张量对应的稠密张量为[[1,0,1],[0,1,0]]
+    reduce_x = [tf.sparse_reduce_sum(x),
+                tf.sparse_reduce_sum(x, axis=1),
+                tf.sparse_reduce_sum(x, axis=1, keepdims=True),
+                tf.sparse_reduce_sum(x, axis=[0, 1])]
+    with tf.Session() as sess:
+        print(sess.run(reduce_x))
+
+    # add 操作
+    with tf.name_scope('AddExample'):
+        a = tf.Variable(1.0, name='a')
+        b = tf.Variable(2.0, name='b')
+        c = tf.add(a, b, name='add')
+        print(c)
